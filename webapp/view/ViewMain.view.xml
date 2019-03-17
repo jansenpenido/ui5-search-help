@@ -1,0 +1,37 @@
+<mvc:View 
+	controllerName="com.jp.ui5-search-help.controller.ViewMain" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	displayBlock="true" 
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Shell 
+		id="shell">
+		<App 
+			id="app">
+			<pages>
+				<Page 
+					id="page" 
+					title="{i18n>title}">
+					<content>
+						<VBox 
+							class="sapUiResponsiveMargin">
+							<Label 
+								text="Product" 
+								labelFor="productInput"/>
+							<Input
+								id="productInput"
+								showValueHelp="true"
+								placeholder="{i18n>productInputPlaceholder}"
+								valueHelpRequest="onProductValueHelp"
+								valueHelpOnly="true">
+								<suggestionItems>
+									<core:Item text="{ProductName}"/>
+								</suggestionItems>
+							</Input>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
